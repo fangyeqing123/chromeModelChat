@@ -118,7 +118,8 @@
          viewJoin(viewId) {
             const existing = this.views.get(viewId);
             if (!existing) {
-               const nickname = this.randomName();
+               const myName = document.getElementById('siquxiongdi_live2d').dataset.myName
+               const nickname = myName || this.randomName();
                this.views.set(viewId, nickname);
             }
             this.participants++;
@@ -134,8 +135,7 @@
          newPost(post) {
             const postingView = post.viewId;
             const nickname = this.views.get(postingView);
-            const myName = document.getElementById('siquxiongdi_live2d').dataset.myName
-            const chatLine = `<div class='chatLine'>${myName||nickname}: <div>${this.escape(post.text)}</div></div>`;
+            const chatLine = `<div class='chatLine'>${nickname}: <div>${this.escape(post.text)}</div></div>`;
             this.addToHistory({
                viewId: postingView,
                html: chatLine
