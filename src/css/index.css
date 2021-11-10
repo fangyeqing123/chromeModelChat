@@ -1,0 +1,97 @@
+.siquxiongdi_box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 200px;
+    margin-bottom: 5px;
+}
+
+.siquxiongdi_nameButton {
+    display: inline-block;
+    padding: 0 18px;
+    height: 32px;
+    line-height: 32px;
+    vertical-align: middle;
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+    background: #06f;
+    cursor: pointer;
+    border-radius: 4px;
+    user-select: none;
+    border: none;
+    outline: none;
+    margin-left: 16px;
+    margin-top: 5px;
+}
+
+.siquxiongdi_content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.siquxiongdi_switch {
+    appearance: none;
+    -moz-appearance: button;
+    -webkit-appearance: none;
+}
+
+.siquxiongdi_switch {
+    position: relative;
+    margin: 0;
+    width: 40px;
+    height: 24px;
+    border: 1px solid #ebebf9;
+    outline: 0;
+    border-radius: 16px;
+    box-sizing: border-box;
+    background-color: #ebebf9;
+    -webkit-transition: background-color 0.1s, border 0.1s;
+    transition: background-color 0.1s, border 0.1s;
+    /* margin-left: auto; */
+}
+
+.siquxiongdi_switch:before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 38px;
+    height: 22px;
+    border-radius: 19px;
+    background-color: #ebebf9;
+    -webkit-transition: -webkit-transform 0.35s cubic-bezier(0.45, 1, 0.4, 1);
+    transition: -webkit-transform 0.35s cubic-bezier(0.45, 1, 0.4, 1);
+    transition: transform 0.35s cubic-bezier(0.45, 1, 0.4, 1);
+}
+
+.siquxiongdi_switch:after {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 1px;
+    width: 22px;
+    height: 22px;
+    border-radius: 15px;
+    background-color: #ffffff;
+    /*box-shadow: 0 1PX 3PX rgba(0, 0, 0, 0.4);*/
+    -webkit-transition: -webkit-transform 0.35s cubic-bezier(0.4, 0.4, 0.25, 1.35);
+    transition: -webkit-transform 0.35s cubic-bezier(0.4, 0.4, 0.25, 1.35);
+    transition: transform 0.35s cubic-bezier(0.4, 0.4, 0.25, 1.35);
+}
+
+.siquxiongdi_switch:checked {
+    background: rgb(69, 124, 190);
+    border: solid 1px rgb(69, 124, 190);
+}
+
+.siquxiongdi_switch:checked:before {
+    transform: scale(0);
+}
+
+.siquxiongdi_switch:checked:after {
+    transform: translateX(15px);
+}

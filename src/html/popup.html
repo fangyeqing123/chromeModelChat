@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="script-src * 'unsafe-inline'" />
+    <title>Document</title>
+    <link href="../css/index.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div id="app" class="siquxiongdi_content">
+        <div class="siquxiongdi_box">
+            <div class="siquxiongdi_name">名字:</div>
+            <input class="siquxiongdi_input" type="text" v-model="name" @input="changeInput">
+        </div>
+        <div class="siquxiongdi_box">
+            <div class="siquxiongdi_name">模型:</div>
+            <div>
+                <select v-model="model">
+                    <option v-for="item in data" :value="item.id">{{item.name}}</option>
+                </select>
+            </div>
+        </div>
+        <div class="siquxiongdi_box">
+            <div class="siquxiongdi_name">禁止的域名:</div>
+            <input class="siquxiongdi_input" v-model="prohibitDomainName" />
+        </div>
+        <div class="siquxiongdi_nameButton" @click="nameSave">保存</div>
+    </div>
+    <script src="../js/vue.min.js"></script>
+    <script src="../js/popup.js"></script>
+</body>
+
+</html>
