@@ -40,10 +40,10 @@
                 canvas.width = 300;
                 canvas.height = 600;
                 canvas.style.width = '150px';
-                canvas.style.position = "fixed";
+                canvas.style.position = "absolute";
                 canvas.style.zIndex = 9999;
                 canvas.style.right = '0px';
-                canvas.style.bottom = '-10px';
+                canvas.style.bottom = '40px';
                 canvas.style.pointerEvents = 'none';
                 canvas.style.filter = 'drop-shadow(0px 10px 10px #ccc)';
                 contentBox.appendChild(canvas);

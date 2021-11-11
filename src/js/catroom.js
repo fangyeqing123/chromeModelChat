@@ -25,11 +25,17 @@
 
    function setupChatPanel() {
       let contentBox = document.getElementById('siquxiongdi_contentBox');
+
+      contentBox.style.position = 'fixed';
+      contentBox.style.width = '300px';
+      contentBox.style.height = '400px';
+      contentBox.style.bottom = '0px';
+      contentBox.style.right = '0';
+      contentBox.style.zIndex = topLevel;
       var panel = document.createElement('div');
 
       panel.id = 'textOut';
-      panel.style.position = "fixed";
-      panel.style.zIndex = topLevel;
+      panel.style.position = "absolute";
       panel.style.right = '150px';
       panel.style.bottom = '90px';
       panel.style.width = '300px';
@@ -45,8 +51,7 @@
       var inputDiv = document.createElement('input');
       inputDiv.id = 'textIn';
       inputDiv.placeholder = '输入聊天';
-      inputDiv.style.position = "fixed";
-      inputDiv.style.zIndex = topLevel;
+      inputDiv.style.position = "absolute";
       inputDiv.style.right = '150px';
       inputDiv.style.bottom = '45px';
       inputDiv.style.width = '150px';
@@ -59,8 +64,7 @@
 
       var totalCountDiv = document.createElement('div');
       totalCountDiv.id = 'totalCount';
-      totalCountDiv.style.position = "fixed";
-      totalCountDiv.style.zIndex = topLevel;
+      totalCountDiv.style.position = "absolute";
       totalCountDiv.style.right = '150px';
       totalCountDiv.style.bottom = '20px';
       totalCountDiv.style.width = '150px';
